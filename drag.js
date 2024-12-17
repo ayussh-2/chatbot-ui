@@ -73,15 +73,38 @@ function setTranslate(xPos, yPos, el) {
     el.style.top = yPos + "px";
 }
 
-// Minimize functionality
 minimizeBtn.addEventListener("click", () => {
-    chatbot.classList.toggle("minimized");
-    minimizeBtn.innerHTML = chatbot.classList.contains("minimized")
-        ? '<i class="fa-solid fa-window-maximize"></i>'
-        : '<i class="fa-solid fa-window-minimize"></i>';
+    if (chatbot.classList.contains("minimized")) {
+        // Restore from minimized state
+        chatbot.classList.remove("minimized");
+        chatbot.style.transform = "scale(1)";
+        chatbot.style.opacity = "1";
+        minimizeBtn.innerHTML = '<i class="fa-solid fa-window-minimize"></i>';
+    } else {
+        // Minimize
+        chatbot.classList.add("minimized");
+        chatbot.style.transform = "scale(0.7)";
+        chatbot.style.opacity = "0.7";
+        minimizeBtn.innerHTML = '<i class="fa-solid fa-window-maximize"></i>';
+    }
 });
 
-// Close functionality
 closeBtn.addEventListener("click", () => {
-    chatbot.style.display = "none";
+    chatbot.style.transition = "opacity 0.3s ease, transform 0.3s ease";
+    chatbot.style.opacity = "0";
+    chatbot.style.transform = "scale(0.9)";
+
+    setTimeout(() => {
+        chatbot.style.display = "none";
+        chatbot.style.transition = "none";
+        chatbot.style.opacity = "1";
+        chatbot.style.transform = "scale(1)";
+    }, 300);
 });
+
+function reopenChatbot() {
+    chatbot.style.display = "block";
+    chatbot.style.transition = "opacity 0.3s ease, transform 0.3s ease";
+    chatbot.style.opacity = "1";
+    chatbot.style.transform = "scale(1)";
+}

@@ -22,7 +22,7 @@
     <body>
         <div class="chat-container" id="chatbot">
             <!-- Header -->
-            <div class="header" id="chatHeader">
+            <div class="chatHeader" id="chatHeader">
                 <h1 class="heading1 styled" style="margin: 0%">Chatbot AI</h1>
                 <div class="controls">
                     <button class="control-button" id="minimizeBtn">
@@ -34,16 +34,23 @@
                 </div>
             </div>
 
-            <div class="select-container">
-                <div class="selected-option">
-                    <span class="option-text">Select an option</span>
-                    <i class="arrow-icon"></i>
-                </div>
-                <div class="options-container hidden">
-                    <div class="option">Option 1</div>
-                    <div class="option">Option 2</div>
-                    <div class="option">Option 3</div>
-                    <div class="option">Option 4</div>
+            <div class="select-component">
+                <div class="select-parent">
+                    <div class="select-container">
+                        <div class="selected-option">
+                            <span class="option-text">Free Copilot</span>
+                            <i class="arrow-icon"></i>
+                        </div>
+                        <div class="options-container hidden">
+                            <div class="option">Copilot 1</div>
+                            <div class="option">Copilot 2</div>
+                            <div class="option">Copilot 3</div>
+                            <div class="option">Copilot 4</div>
+                        </div>
+                    </div>
+                    <button class="select-reload-button">
+                        <i class="fa-solid fa-rotate-right"></i>
+                    </button>
                 </div>
             </div>
 
