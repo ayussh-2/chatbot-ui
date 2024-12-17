@@ -12,3 +12,20 @@ document.querySelectorAll(".copy-button").forEach((button) => {
             .catch((err) => console.error("Failed to copy text: ", err));
     });
 });
+
+const selectContainer = document.querySelector(".select-container");
+const selectedOption = document.querySelector(".selected-option");
+const optionsContainer = document.querySelector(".options-container");
+const options = document.querySelectorAll(".option");
+
+selectedOption.addEventListener("click", () => {
+    optionsContainer.classList.toggle("hidden");
+});
+
+options.forEach((option) => {
+    option.addEventListener("click", () => {
+        document.querySelector(".selected-option .option-text").textContent =
+            option.textContent;
+        optionsContainer.classList.add("hidden");
+    });
+});

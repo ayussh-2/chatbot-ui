@@ -512,3 +512,97 @@ body {
     overflow-y: auto;
     height: 90vh;
 }
+
+.skeleton-loader {
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+}
+
+.skeleton-line {
+    flex: 1;
+    height: 50px;
+    background: linear-gradient(to right, #18181b, #2c2c2e, #18181b);
+    background-size: 200% 200%;
+    border-radius: 8px;
+    animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -200% 0;
+    }
+    100% {
+        background-position: 200% 0;
+    }
+}
+
+.skeleton-loader {
+    width: 80%;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-size: 200% 100%;
+}
+
+.select-container {
+    position: relative;
+    width: 200px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.selected-option {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.arrow-icon {
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #666;
+}
+
+.options-container {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    animation: bounce 0.5s ease;
+    transform-origin: top center;
+}
+
+.options-container.hidden {
+    display: none;
+}
+
+.option {
+    padding: 10px;
+}
+
+.option:hover {
+    background-color: #e0e0e0;
+}
+
+@keyframes bounce {
+    0% {
+        transform: scaleY(0);
+    }
+    50% {
+        transform: scaleY(1.1);
+    }
+    100% {
+        transform: scaleY(1);
+    }
+}
