@@ -11,11 +11,9 @@ let initialY;
 let xOffset = 0;
 let yOffset = 0;
 
-// Set initial position
 chatbot.style.left = "20px";
 chatbot.style.top = "20px";
 
-// Dragging functionality
 header.addEventListener("mousedown", dragStart);
 document.addEventListener("mousemove", drag);
 document.addEventListener("mouseup", dragEnd);
@@ -34,7 +32,6 @@ function drag(e) {
     if (isDragging) {
         e.preventDefault();
 
-        // Calculate new position
         let newX = e.clientX - initialX;
         let newY = e.clientY - initialY;
 

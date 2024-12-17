@@ -453,6 +453,7 @@ body {
 }
 
 .chat-bubble-robot {
+    position: relative;
     display: flex;
     padding: 1rem;
     flex-direction: column;
@@ -463,6 +464,26 @@ body {
     border-radius: 0.25rem 1rem 1rem 1rem;
     border: 1px solid var(--Primitive-Color-Primary-500, #8051ea);
     background: var(--Primitive-Color-Neutral-800, #18181b);
+}
+
+.copy-button {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: transparent;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    color: #fff;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    transform: translateY(-10px);
+}
+
+.chat-bubble-robot:hover .copy-button {
+    opacity: 1;
+    transform: translateY(0);
+    display: block;
 }
 
 .chat-logo {
