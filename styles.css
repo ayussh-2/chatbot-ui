@@ -142,7 +142,7 @@
 }
 
 body {
-    font-family: "Geist Mono", monospace;
+    font-family: "Poppins", monospace;
     background: #000;
 }
 
@@ -279,7 +279,7 @@ body {
     border: 1px solid var(--Primitive-Color-Neutral-500, #27272b);
     background: var(--Primitive-Color-Neutral-700, #1c1c1f);
     color: var(--Primitive-Color-Neutral-100, #fff);
-    font-family: "Geist Mono", monospace;
+    font-family: "Poppins", monospace;
     transition: border 0.2s ease;
 }
 
