@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="./styles.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+            integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <title>Chatbot UI</title>
+    </head>
+    <body>
+        <div class="chat-container" id="chatbot">
+            <!-- Header -->
+            <div class="header" id="chatHeader">
+                <h1 class="heading1 styled" style="margin: 0%">Chatbot AI</h1>
+                <div class="controls">
+                    <button class="control-button" id="minimizeBtn">
+                        <i class="fa-solid fa-window-minimize"></i>
+                    </button>
+                    <button class="control-button" id="closeBtn">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Conversation Messages -->
+            <div class="message-container">
+                <!-- User Message -->
+                <div class="chat-bubble-user" style="align-self: flex-end">
+                    <span class="body-2-medium" style="color: white"
+                        >I need to go to embassy of Indonesia</span
+                    >
+                </div>
+
+                <div class="chat-bubble-user" style="align-self: flex-end">
+                    <span class="body-2-medium" style="color: white"
+                        >KBL, Tanah Abang, Central Jakarta City, Jakarta</span
+                    >
+                </div>
+
+                <!-- Bot Response -->
+                <div
+                    class="robot-chat-container"
+                    style="align-self: flex-start"
+                >
+                    <div class="chat-logo">Sk</div>
+                    <div class="chat-bubble-robot">
+                        <span class="body-2-medium" style="color: white">
+                            Okay, you're on the right way!<br /><br />
+                            After you stop at the station, please find a panel
+                            like this:
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Bot Image Suggestion -->
+                <div
+                    class="robot-chat-container"
+                    style="align-self: flex-start"
+                >
+                    <div class="chat-logo">Sk</div>
+                    <div class="chat-bubble-robot">
+                        <img
+                            src="https://via.placeholder.com/200"
+                            alt="Navigation Panel"
+                            style="border-radius: 8px; max-width: 100%"
+                        />
+                    </div>
+                </div>
+
+                <!-- User Response -->
+                <div class="chat-bubble-user" style="align-self: flex-end">
+                    <span class="body-2-medium" style="color: white"
+                        >Thank you! What next?</span
+                    >
+                </div>
+
+                <!-- Bot Response -->
+                <div
+                    class="robot-chat-container"
+                    style="align-self: flex-start"
+                >
+                    <div class="chat-logo">Sk</div>
+                    <div class="chat-bubble-robot">
+                        <span class="body-2-medium" style="color: white">
+                            Once you locate the panel, follow the signs for
+                            'Embassy Shuttle' or exit gate number 5. Have a safe
+                            trip!
+                        </span>
+                    </div>
+                </div>
+
+                <!-- User Response -->
+                <div class="chat-bubble-user" style="align-self: flex-end">
+                    <span class="body-2-medium" style="color: white"
+                        >Got it! How long is the walk to the embassy?</span
+                    >
+                </div>
+
+                <!-- Bot Response -->
+                <div
+                    class="robot-chat-container"
+                    style="align-self: flex-start"
+                >
+                    <div class="chat-logo">Sk</div>
+                    <div class="chat-bubble-robot">
+                        <span class="body-2-medium" style="color: white">
+                            It should take approximately 10-15 minutes on foot.
+                            If you prefer, there are also taxis available right
+                            outside the station.
+                        </span>
+                    </div>
+                </div>
+
+                <!-- User Response -->
+                <div class="chat-bubble-user" style="align-self: flex-end">
+                    <span class="body-2-medium" style="color: white"
+                        >Perfect, I’ll just walk! Anything I should watch out
+                        for?</span
+                    >
+                </div>
+
+                <!-- Bot Response -->
+                <div
+                    class="robot-chat-container"
+                    style="align-self: flex-start"
+                >
+                    <div class="chat-logo">Sk</div>
+                    <div class="chat-bubble-robot">
+                        <span class="body-2-medium" style="color: white">
+                            Watch for the traffic near the station exit; it can
+                            get busy. Also, the embassy is next to a cafe called
+                            "Jakarta Coffee Corner"—a great spot to grab a drink
+                            if you arrive early!
+                        </span>
+                    </div>
+                </div>
+
+                <!-- User Response -->
+                <div class="chat-bubble-user" style="align-self: flex-end">
+                    <span class="body-2-medium" style="color: white"
+                        >Sounds great, thanks for the help!</span
+                    >
+                </div>
+
+                <!-- Bot Final Response -->
+                <div
+                    class="robot-chat-container"
+                    style="align-self: flex-start"
+                >
+                    <div class="chat-logo">Sk</div>
+                    <div class="chat-bubble-robot">
+                        <span class="body-2-medium" style="color: white">
+                            You're very welcome! Safe travels, and let me know
+                            if you need more assistance. 😊
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Input Area -->
+            <div class="input-container" style="width: 100%">
+                <input
+                    type="text"
+                    placeholder="Type your problems here"
+                    class="input-container-input"
+                />
+                <button class="sendbutton">
+                    <i class="fa-regular fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+        <script src="./drag.js"></script>
+    </body>
+</html>
